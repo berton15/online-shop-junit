@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -39,4 +38,31 @@ public class CommentTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void testAuthorRatingDetails()
+    {
+        Comment comment1 = new Comment("Fred", "It's okay", 2);
+        assertEquals("Fred", comment1.getAuthor());
+        assertEquals(2, comment1.getRating());
+    }
+
+    @Test
+    public void testUpvote()
+    {
+        Comment comment1 = new Comment("Fred", "It's okay", 2);
+        assertEquals(0, comment1.getVoteCount());
+        comment1.upvote();
+        assertEquals(1, comment1.getVoteCount());
+    }
+
+    @Test
+    public void testDownvote()
+    {
+        Comment comment1 = new Comment("Fred", "It's okay", 2);
+        assertEquals(0, comment1.getVoteCount());
+        comment1.downvote();
+        assertEquals(-1, comment1.getVoteCount());
+    }
 }
+
