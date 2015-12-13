@@ -94,4 +94,17 @@ public class SalesItemTest
         assertEquals(false, salesIte1.addComment("James Duckling", "Great book. ...", 6));
         assertEquals(false, salesIte1.addComment("Fred", "Meh", 0));
     }
+
+
+    @Test
+    public void testFindMostHelpfulComment()
+    {
+        SalesItem salesIte1 = new SalesItem("Java Book", 12345);
+        salesIte1.addComment("Fred", "Like it", 2);
+        salesIte1.addComment("James Duckling", "Great book. ...", 4);
+        salesIte1.upvoteComment(1);
+        Comment comment1 = salesIte1.findMostHelpfulComment();
+        assertNotNull(comment1);
+        assertEquals(1, comment1.getVoteCount());
+    }
 }

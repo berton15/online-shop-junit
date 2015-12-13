@@ -23,4 +23,6 @@ comment7.params=
 comment7.target=void\ testCommentFromAuthorExists()
 comment8.params=
 comment8.target=void\ testRatingBoundaries()
-numComments=9
+comment9.params=
+comment9.target=void\ testFindMostHelpfulComment()
+numComments=10
