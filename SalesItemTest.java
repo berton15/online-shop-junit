@@ -70,7 +70,6 @@ public class SalesItemTest
         assertEquals(1000, salesIte1.getPrice());
     }
 
-
     @Test
     public void testTwoComments()
     {
@@ -79,8 +78,12 @@ public class SalesItemTest
         assertEquals(true, salesIte1.addComment("Fred", "Like it", 2));
         assertEquals(2, salesIte1.getNumberOfComments());
     }
+
+    @Test
+    public void testCommentFromAuthorExists()
+    {
+        SalesItem salesIte1 = new SalesItem("Java Book", 12345);
+        assertEquals(true, salesIte1.addComment("Fred", "Like it", 2));
+        assertEquals(false, salesIte1.addComment("Fred", "Changed my mind, it's great", 5));
+    }
 }
-
-
-
-

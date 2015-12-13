@@ -19,4 +19,6 @@ comment5.target=void\ testInit()
 comment5.text=\r\n\ Test\ that\ a\ sales\ item\ is\ correctly\ initialised\ (name\ and\ price).\r\n
 comment6.params=
 comment6.target=void\ testTwoComments()
-numComments=7
+comment7.params=
+comment7.target=void\ testCommentFromAuthorExists()
+numComments=8
