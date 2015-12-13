@@ -86,4 +86,12 @@ public class SalesItemTest
         assertEquals(true, salesIte1.addComment("Fred", "Like it", 2));
         assertEquals(false, salesIte1.addComment("Fred", "Changed my mind, it's great", 5));
     }
+
+    @Test
+    public void testRatingBoundaries()
+    {
+        SalesItem salesIte1 = new SalesItem("Java Book", 12345);
+        assertEquals(false, salesIte1.addComment("James Duckling", "Great book. ...", 6));
+        assertEquals(false, salesIte1.addComment("Fred", "Meh", 0));
+    }
 }

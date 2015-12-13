@@ -21,4 +21,6 @@ comment6.params=
 comment6.target=void\ testTwoComments()
 comment7.params=
 comment7.target=void\ testCommentFromAuthorExists()
-numComments=8
+comment8.params=
+comment8.target=void\ testRatingBoundaries()
+numComments=9
