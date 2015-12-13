@@ -11,6 +11,9 @@ import org.junit.Test;
  */
 public class SalesItemTest
 {
+    private SalesItem salesIte1;
+    private SalesItem salesIte2;
+
     /**
      * Default constructor for test class SalesItemTest
      */
@@ -26,6 +29,9 @@ public class SalesItemTest
     @Before
     public void setUp()
     {
+        salesIte1 = new SalesItem("Java Book", 12345);
+        salesIte2 = new SalesItem("Other", 123);
+        salesIte2.addComment("Fred", "too expensive", 1);
     }
 
     /**
