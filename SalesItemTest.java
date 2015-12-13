@@ -72,11 +72,11 @@ public class SalesItemTest
 
 
     @Test
-    public void testAddTwoComments()
+    public void testTwoComments()
     {
-        SalesItem salesIte1 = new SalesItem("VG", 100);
-        assertEquals(true, salesIte1.addComment("Alfa", "Kommentar", 3));
-        assertEquals(true, salesIte1.addComment("Beta", "Kommentar", 5));
+        SalesItem salesIte1 = new SalesItem("Java Book", 12345);
+        assertEquals(true, salesIte1.addComment("James Duckling", "Great book. ...", 4));
+        assertEquals(true, salesIte1.addComment("Fred", "Like it", 2));
         assertEquals(2, salesIte1.getNumberOfComments());
     }
 }
